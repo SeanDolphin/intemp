@@ -20,7 +20,6 @@ import (
 	"github.com/SeanDolphin/intemp"
 )
 
-
 func main() {
 	err := intemp.New(context.Background(),func(ctx context.Context, tempDir string)error{
 		//do something with the tempDir
@@ -33,4 +32,31 @@ func main() {
 }
 
 ~~~
+
+You can also set the path associated with the temp folder
+
+~~~ go
+// main.go
+package main
+
+import (
+	"log"
+	"github.com/SeanDolphin/intemp"
+)
+
+func main() {
+	ctx := context.Background()
+	ctx = intemp.SetRoot(ctx, "/somepath")
+	err := intemp.New(ctx,func(ctx context.Context, tempDir string)error{
+		//do something with the tempDir
+		return nil
+	})
+
+	if err != nil{
+		log.Fatal(err)
+	}
+}
+
+~~~
+
 

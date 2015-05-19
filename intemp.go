@@ -4,16 +4,11 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/cogger/stash"
 	"golang.org/x/net/context"
 )
 
 func New(ctx context.Context, f func(context.Context, string) error) error {
-	prefix, _ := stash.Get(ctx, "prefix", func() interface{} {
-		return ""
-	}).(string)
-
-	temp, err := ioutil.TempDir(prefix, "intemp")
+	temp, err := ioutil.TempDir(getRoot(ctx), "intemp")
 	if err != nil {
 		return err
 	}

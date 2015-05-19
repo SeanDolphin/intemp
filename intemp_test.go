@@ -7,7 +7,6 @@ import (
 	"path/filepath"
 
 	. "github.com/SeanDolphin/intemp"
-	"github.com/cogger/stash"
 	"golang.org/x/net/context"
 
 	. "github.com/onsi/ginkgo"
@@ -47,7 +46,7 @@ var _ = Describe("Intemp", func() {
 	})
 
 	It("should error when a temp directory can not be created", func() {
-		ctx := stash.Set(context.Background(), "prefix", "/_does_not_exist")
+		ctx := SetRoot(context.Background(), "/_does_not_exist")
 		err := New(ctx, func(ctx context.Context, tempDir string) error {
 			return nil
 		})
