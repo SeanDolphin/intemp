@@ -33,7 +33,7 @@ func main() {
 
 ~~~
 
-You can also set the path associated with the temp folder
+You can also set the path associated with the temp folder.
 
 ~~~ go
 // main.go
@@ -60,3 +60,28 @@ func main() {
 ~~~
 
 
+You can also set the temp directory to debug and it will not delete the directory.
+
+~~~ go
+// main.go
+package main
+
+import (
+	"log"
+	"github.com/SeanDolphin/intemp"
+)
+
+func main() {
+	ctx := context.Background()
+	ctx = intemp.SetDebug(ctx, true)
+	err := intemp.New(ctx,func(ctx context.Context, tempDir string)error{
+		//do something with the tempDir
+		return nil
+	})
+
+	if err != nil{
+		log.Fatal(err)
+	}
+}
+
+~~~

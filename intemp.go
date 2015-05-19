@@ -13,6 +13,8 @@ func New(ctx context.Context, f func(context.Context, string) error) error {
 		return err
 	}
 
-	defer os.RemoveAll(temp)
+	if !isDebug(ctx) {
+		defer os.RemoveAll(temp)
+	}
 	return f(ctx, temp)
 }
