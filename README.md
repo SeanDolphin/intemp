@@ -1,7 +1,5 @@
 # intemp
 
-# namespace 
-
 [![GoDoc](https://godoc.org/github.com/SeanDolphin/intemp?status.png)](http://godoc.org/github.com/SeanDolphin/intemp)  
 [![Build Status](https://travis-ci.org/SeanDolphin/intemp.svg?branch=master)](https://travis-ci.org/SeanDolphin/intemp)  
 [![Coverage Status](https://coveralls.io/repos/SeanDolphin/intemp/badge.svg?branch=master)](https://coveralls.io/r/SeanDolphin/intemp?branch=master)  
