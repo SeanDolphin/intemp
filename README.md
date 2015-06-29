@@ -8,6 +8,14 @@
 
 intemp creates and cleans up a temp directory.
 
+## Installation
+
+The import path for the package is *gopkg.in/SeanDolphin/intemp.v1*.
+
+To install it, run:
+
+    go get gopkg.in/SeanDolphin/intemp.v1
+    
 ## Usage
 ~~~ go
 // main.go
@@ -15,7 +23,7 @@ package main
 
 import (
 	"log"
-	"github.com/SeanDolphin/intemp"
+	"gopkg.in/SeanDolphin/intemp.v1"
 )
 
 func main() {

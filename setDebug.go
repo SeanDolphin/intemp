@@ -1,8 +1,8 @@
 package intemp
 
 import (
-	"github.com/cogger/stash"
 	"golang.org/x/net/context"
+	"gopkg.in/cogger/stash.v1"
 )
 
 func SetDebug(ctx context.Context, flag bool) context.Context {

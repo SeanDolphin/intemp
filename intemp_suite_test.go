@@ -1,4 +1,4 @@
-package intemp_test
+package intemp
 
 import (
 	. "github.com/onsi/ginkgo"

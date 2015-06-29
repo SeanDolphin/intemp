@@ -1,4 +1,4 @@
-package intemp_test
+package intemp
 
 import (
 	"errors"
@@ -6,7 +6,6 @@ import (
 	"os"
 	"path/filepath"
 
-	. "github.com/SeanDolphin/intemp"
 	"golang.org/x/net/context"
 
 	. "github.com/onsi/ginkgo"
